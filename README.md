@@ -1,6 +1,3 @@
-Here's a professional README template for your "Mon3em Currency Converter" project:
-
----
 
 # Mon3em Currency Converter
 
