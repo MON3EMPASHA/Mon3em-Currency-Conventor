@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.5/axios.min.js"
+      integrity="sha512-01Pe9P3mJM/4c80VuoYEGHlspKGbd9uWQe9HtdLsdTqV0CS1kz8ca44sinVEXEvlZNciMmsAjeEbm5ZxHC7yYg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form">
+        <header class="header">
+          <h1 class="title">Mon3em Currency Converter</h1>
+          <p class="subtitle">
+            Real-time currency conversion at your fingertips
+          </p>
+        </header>
+        <nav class="toggle-buttons">
+          <button class="toggle-option active" id="convertBtn">Convert</button>
+          <button class="toggle-option" id="exchangeBtn">Exchange Rate</button>
+        </nav>
+        <div class="content">
+          <form id="convert_form" class="form-section">
+            <div class="form-group">
+              <label for="enteredAmount" class="label">Amount</label>
+              <input
+                type="number"
+                id="enteredAmount"
+                class="input"
+                placeholder="Enter amount"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="from" class="label">From</label>
+              <select id="from" class="input">
+                <option value="USD">USD</option>
+                <option value="EGP">EGP</option>
+                <option value="EUR">EUR</option>
+                <option value="GBP">GBP</option>
+                <option value="JPY">JPY</option>
+                <option value="AUD">AUD</option>
+                <option value="CAD">CAD</option>
+                <option value="CHF">CHF</option>
+                <option value="CNY">CNY</option>
+                <option value="DKK">DKK</option>
+                <option value="HKD">HKD</option>
+                <option value="INR">INR</option>
+                <option value="MXN">MXN</option>
+                <option value="NOK">NOK</option>
+                <option value="NZD">NZD</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="to" class="label">To</label>
+              <select id="to" class="input">
+                <option value="EGP">EGP</option>
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="GBP">GBP</option>
+                <option value="JPY">JPY</option>
+                <option value="AUD">AUD</option>
+                <option value="CAD">CAD</option>
+                <option value="CHF">CHF</option>
+                <option value="CNY">CNY</option>
+                <option value="DKK">DKK</option>
+                <option value="HKD">HKD</option>
+                <option value="INR">INR</option>
+                <option value="MXN">MXN</option>
+                <option value="NOK">NOK</option>
+                <option value="NZD">NZD</option>
+              </select>
+            </div>
+            <button type="submit" class="btn">Convert</button>
+          </form>
+
+          <form id="exchange_form" class="form-section hidden">
+            <div class="form-group">
+              <label for="BaseCurrency" class="label">Base Currency</label>
+              <select id="BaseCurrency" class="input">
+                <option value="USD">USD</option>
+                <option value="EGP">EGP</option>
+                <option value="EUR">EUR</option>
+                <option value="GBP">GBP</option>
+                <option value="JPY">JPY</option>
+                <option value="AUD">AUD</option>
+                <option value="CAD">CAD</option>
+                <option value="CHF">CHF</option>
+                <option value="CNY">CNY</option>
+                <option value="DKK">DKK</option>
+                <option value="HKD">HKD</option>
+                <option value="INR">INR</option>
+                <option value="MXN">MXN</option>
+                <option value="NOK">NOK</option>
+                <option value="NZD">NZD</option>
+              </select>
+            </div>
+            <button type="submit" class="btn">Get Exchange Rates</button>
+          </form>
+          <div id="Result" class="result"></div>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
